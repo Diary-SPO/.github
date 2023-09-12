@@ -1,12 +1,16 @@
-## Hi there 👋
+# Дневник СПО
 
-<!--
+Дневник СПО — обёртка над дневником Сетевого города для СПО (как минимум API совпадает с Томской областью)
 
-**Here are some ideas to get you started:**
+## Frontend
+Клиентская часть написана на React / TS / VKUI / VK Router с использованием VK Bridge для взаимодействия с юзером внутри VK 
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+Сервис также может работать и вне VK, но мы разворачиваем сервис исключительно в VK
+
+## Backend
+
+Сервер по сути является прокси, потому что из клиентской части нельзя делать запросы на бэк сетевого города.
+
+Написан на Express / TS на основе новой платформы Bun (https://github.com/scffs/bun-backend). Также есть сервер на Go
+
+У сервиса (пока что) нет БД, необходимые данные хранятся на стороне VK и автоматически шарятся (передаются) между устройствами юзера
